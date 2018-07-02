@@ -28,6 +28,114 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
+            "00",
+            "5401.70",
+            "4001.70"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
+            "01",
+            "5406.70",
+            "4006.70"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
+            "02",
+            "5411.60",
+            "4011.60"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
+            "03",
+            "5417.20",
+            "4017.20"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem5 = new System.Windows.Forms.ListViewItem(new string[] {
+            "04",
+            "5422.80",
+            "4022.80"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem6 = new System.Windows.Forms.ListViewItem(new string[] {
+            "05",
+            "5427.80",
+            "4027.80"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem7 = new System.Windows.Forms.ListViewItem(new string[] {
+            "06",
+            "5432.80",
+            "4032.80"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem8 = new System.Windows.Forms.ListViewItem(new string[] {
+            "07",
+            "5438.40",
+            "4038.40"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem9 = new System.Windows.Forms.ListViewItem(new string[] {
+            "08",
+            "5443.90",
+            "4043.90"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem10 = new System.Windows.Forms.ListViewItem(new string[] {
+            "09",
+            "5448.90",
+            "4048.90"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem11 = new System.Windows.Forms.ListViewItem(new string[] {
+            "10",
+            "5453.90",
+            "4053.90"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem12 = new System.Windows.Forms.ListViewItem(new string[] {
+            "11",
+            "5459.55",
+            "4059.55"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem13 = new System.Windows.Forms.ListViewItem(new string[] {
+            "12",
+            "5465.10",
+            "4065.10"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem14 = new System.Windows.Forms.ListViewItem(new string[] {
+            "13",
+            "5470.10",
+            "4070.10"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem15 = new System.Windows.Forms.ListViewItem(new string[] {
+            "14",
+            "5475.10",
+            "4075.10"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem(new string[] {
+            "15",
+            "5480.60",
+            "4080.60"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem(new string[] {
+            "16",
+            "5486.20",
+            "4086.20"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem(new string[] {
+            "17",
+            "5491.20",
+            "4091.20"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem(new string[] {
+            "18",
+            "5496.30",
+            "4096.30"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem(new string[] {
+            "19",
+            "5501.80",
+            "4101.80"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem21 = new System.Windows.Forms.ListViewItem(new string[] {
+            "20",
+            "5507.30",
+            "4107.30"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem22 = new System.Windows.Forms.ListViewItem(new string[] {
+            "21",
+            "5512.40",
+            "4112.40"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem23 = new System.Windows.Forms.ListViewItem(new string[] {
+            "22",
+            "5517.40",
+            "4117.40"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem24 = new System.Windows.Forms.ListViewItem(new string[] {
+            "23",
+            "5522.90",
+            "4122.90"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem25 = new System.Windows.Forms.ListViewItem(new string[] {
+            "24",
+            "5528.40",
+            "4128.40"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem26 = new System.Windows.Forms.ListViewItem(new string[] {
+            "25",
+            "5533.50",
+            "4133.50"}, -1);
+            System.Windows.Forms.ListViewItem listViewItem27 = new System.Windows.Forms.ListViewItem(new string[] {
+            "26",
+            "5538.60",
+            "4138.60"}, -1);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pbSerialPort = new System.Windows.Forms.PictureBox();
@@ -36,11 +144,11 @@
             this.cbSerialPort = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.rbSilence = new System.Windows.Forms.RadioButton();
-            this.rbNormal = new System.Windows.Forms.RadioButton();
             this.btnFreq = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
             this.tbFreq = new System.Windows.Forms.TextBox();
+            this.rbSilence = new System.Windows.Forms.RadioButton();
+            this.rbNormal = new System.Windows.Forms.RadioButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.tbTemp = new System.Windows.Forms.TextBox();
@@ -63,10 +171,19 @@
             this.btnSweep = new System.Windows.Forms.Button();
             this.label21 = new System.Windows.Forms.Label();
             this.tbSweep = new System.Windows.Forms.TextBox();
-            this.label22 = new System.Windows.Forms.Label();
             this.tbStop = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.tbStart = new System.Windows.Forms.TextBox();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.cbAllContinue = new System.Windows.Forms.CheckBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.tbDelayTime = new System.Windows.Forms.TextBox();
+            this.btnSweepStop = new System.Windows.Forms.Button();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.lvFreqTable = new System.Windows.Forms.ListView();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbSerialPort)).BeginInit();
             this.groupBox6.SuspendLayout();
@@ -80,6 +197,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbAlarm2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAlarm1)).BeginInit();
             this.groupBox4.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -155,57 +274,31 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("맑은 고딕", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.label7.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label7.Location = new System.Drawing.Point(121, 22);
+            this.label7.Location = new System.Drawing.Point(159, 21);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(301, 37);
+            this.label7.Size = new System.Drawing.Size(593, 37);
             this.label7.TabIndex = 15;
-            this.label7.Text = "주파수 합성 모듈 (FS2)";
+            this.label7.Text = "차기대포병탐지레이더 주파수합성모듈2(FSM2)";
             // 
             // groupBox6
             // 
-            this.groupBox6.Controls.Add(this.rbSilence);
-            this.groupBox6.Controls.Add(this.rbNormal);
             this.groupBox6.Controls.Add(this.btnFreq);
             this.groupBox6.Controls.Add(this.label13);
             this.groupBox6.Controls.Add(this.tbFreq);
             this.groupBox6.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox6.Location = new System.Drawing.Point(264, 155);
+            this.groupBox6.Location = new System.Drawing.Point(264, 242);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(281, 134);
+            this.groupBox6.Size = new System.Drawing.Size(281, 81);
             this.groupBox6.TabIndex = 19;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "FREQ. SELECT";
-            // 
-            // rbSilence
-            // 
-            this.rbSilence.AutoSize = true;
-            this.rbSilence.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbSilence.Location = new System.Drawing.Point(18, 103);
-            this.rbSilence.Name = "rbSilence";
-            this.rbSilence.Size = new System.Drawing.Size(80, 23);
-            this.rbSilence.TabIndex = 20;
-            this.rbSilence.TabStop = true;
-            this.rbSilence.Text = "SILENCE";
-            this.rbSilence.UseVisualStyleBackColor = true;
-            // 
-            // rbNormal
-            // 
-            this.rbNormal.AutoSize = true;
-            this.rbNormal.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbNormal.Location = new System.Drawing.Point(18, 77);
-            this.rbNormal.Name = "rbNormal";
-            this.rbNormal.Size = new System.Drawing.Size(86, 23);
-            this.rbNormal.TabIndex = 19;
-            this.rbNormal.TabStop = true;
-            this.rbNormal.Text = "NORMAL";
-            this.rbNormal.UseVisualStyleBackColor = true;
             // 
             // btnFreq
             // 
             this.btnFreq.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFreq.Location = new System.Drawing.Point(155, 28);
             this.btnFreq.Name = "btnFreq";
-            this.btnFreq.Size = new System.Drawing.Size(120, 98);
+            this.btnFreq.Size = new System.Drawing.Size(120, 36);
             this.btnFreq.TabIndex = 12;
             this.btnFreq.Text = "SEND";
             this.btnFreq.UseVisualStyleBackColor = true;
@@ -231,6 +324,30 @@
             this.tbFreq.Text = "0";
             this.tbFreq.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbFreq.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbFreq_KeyPress);
+            // 
+            // rbSilence
+            // 
+            this.rbSilence.AutoSize = true;
+            this.rbSilence.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbSilence.Location = new System.Drawing.Point(155, 35);
+            this.rbSilence.Name = "rbSilence";
+            this.rbSilence.Size = new System.Drawing.Size(91, 27);
+            this.rbSilence.TabIndex = 20;
+            this.rbSilence.TabStop = true;
+            this.rbSilence.Text = "SILENCE";
+            this.rbSilence.UseVisualStyleBackColor = true;
+            // 
+            // rbNormal
+            // 
+            this.rbNormal.AutoSize = true;
+            this.rbNormal.Font = new System.Drawing.Font("Calibri", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbNormal.Location = new System.Drawing.Point(26, 35);
+            this.rbNormal.Name = "rbNormal";
+            this.rbNormal.Size = new System.Drawing.Size(98, 27);
+            this.rbNormal.TabIndex = 19;
+            this.rbNormal.TabStop = true;
+            this.rbNormal.Text = "NORMAL";
+            this.rbNormal.UseVisualStyleBackColor = true;
             // 
             // groupBox3
             // 
@@ -424,46 +541,52 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.btnSweepStop);
+            this.groupBox4.Controls.Add(this.tbDelayTime);
+            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.cbAllContinue);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.label10);
             this.groupBox4.Controls.Add(this.btnSweep);
             this.groupBox4.Controls.Add(this.label21);
             this.groupBox4.Controls.Add(this.tbSweep);
-            this.groupBox4.Controls.Add(this.label22);
             this.groupBox4.Controls.Add(this.tbStop);
             this.groupBox4.Controls.Add(this.label23);
             this.groupBox4.Controls.Add(this.tbStart);
             this.groupBox4.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.groupBox4.Location = new System.Drawing.Point(23, 602);
+            this.groupBox4.Location = new System.Drawing.Point(264, 329);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(522, 101);
+            this.groupBox4.Size = new System.Drawing.Size(281, 267);
             this.groupBox4.TabIndex = 21;
             this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "SWEEP";
+            this.groupBox4.Text = "SWEEP SELECT";
             // 
             // btnSweep
             // 
             this.btnSweep.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSweep.Location = new System.Drawing.Point(396, 51);
+            this.btnSweep.Location = new System.Drawing.Point(15, 221);
             this.btnSweep.Name = "btnSweep";
             this.btnSweep.Size = new System.Drawing.Size(120, 36);
             this.btnSweep.TabIndex = 12;
-            this.btnSweep.Text = "SEND";
+            this.btnSweep.Text = "START";
             this.btnSweep.UseVisualStyleBackColor = true;
             this.btnSweep.Click += new System.EventHandler(this.btnSweep_Click);
             // 
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(278, 29);
+            this.label21.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(11, 100);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(85, 19);
+            this.label21.Size = new System.Drawing.Size(96, 19);
             this.label21.TabIndex = 30;
-            this.label21.Text = "SWEEP No.";
+            this.label21.Text = "Window Start";
             // 
             // tbSweep
             // 
             this.tbSweep.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbSweep.Location = new System.Drawing.Point(263, 51);
+            this.tbSweep.Location = new System.Drawing.Point(120, 174);
             this.tbSweep.Name = "tbSweep";
             this.tbSweep.Size = new System.Drawing.Size(115, 36);
             this.tbSweep.TabIndex = 28;
@@ -471,20 +594,10 @@
             this.tbSweep.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbSweep.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbSweep_KeyPress);
             // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(176, 29);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(45, 19);
-            this.label22.TabIndex = 27;
-            this.label22.Text = "STOP";
-            // 
             // tbStop
             // 
             this.tbStop.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbStop.Location = new System.Drawing.Point(139, 51);
+            this.tbStop.Location = new System.Drawing.Point(120, 132);
             this.tbStop.Name = "tbStop";
             this.tbStop.Size = new System.Drawing.Size(115, 36);
             this.tbStop.TabIndex = 25;
@@ -495,17 +608,17 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(49, 29);
+            this.label23.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(11, 32);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(51, 19);
+            this.label23.Size = new System.Drawing.Size(82, 19);
             this.label23.TabIndex = 24;
-            this.label23.Text = "START";
+            this.label23.Text = "Delay Time";
             // 
             // tbStart
             // 
             this.tbStart.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tbStart.Location = new System.Drawing.Point(15, 51);
+            this.tbStart.Location = new System.Drawing.Point(120, 90);
             this.tbStart.Name = "tbStart";
             this.tbStart.Size = new System.Drawing.Size(115, 36);
             this.tbStart.TabIndex = 19;
@@ -513,11 +626,149 @@
             this.tbStart.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.tbStart.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbStart_KeyPress);
             // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.rbNormal);
+            this.groupBox5.Controls.Add(this.rbSilence);
+            this.groupBox5.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox5.Location = new System.Drawing.Point(264, 155);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(281, 81);
+            this.groupBox5.TabIndex = 20;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "MODE SELECT";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(238, 39);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(31, 19);
+            this.label10.TabIndex = 19;
+            this.label10.Text = "sec";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(11, 64);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(88, 19);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "All Continue";
+            // 
+            // cbAllContinue
+            // 
+            this.cbAllContinue.AutoSize = true;
+            this.cbAllContinue.Location = new System.Drawing.Point(120, 69);
+            this.cbAllContinue.Name = "cbAllContinue";
+            this.cbAllContinue.Size = new System.Drawing.Size(15, 14);
+            this.cbAllContinue.TabIndex = 32;
+            this.cbAllContinue.UseVisualStyleBackColor = true;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(11, 142);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(94, 19);
+            this.label14.TabIndex = 33;
+            this.label14.Text = "Window Stop";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(11, 184);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(88, 19);
+            this.label15.TabIndex = 34;
+            this.label15.Text = "Window No.";
+            // 
+            // tbDelayTime
+            // 
+            this.tbDelayTime.Font = new System.Drawing.Font("Consolas", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDelayTime.Location = new System.Drawing.Point(120, 24);
+            this.tbDelayTime.Name = "tbDelayTime";
+            this.tbDelayTime.Size = new System.Drawing.Size(115, 36);
+            this.tbDelayTime.TabIndex = 35;
+            this.tbDelayTime.Text = "0.0";
+            this.tbDelayTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.tbDelayTime.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tbDelayTime_KeyPress);
+            // 
+            // btnSweepStop
+            // 
+            this.btnSweepStop.Font = new System.Drawing.Font("Calibri", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSweepStop.Location = new System.Drawing.Point(155, 221);
+            this.btnSweepStop.Name = "btnSweepStop";
+            this.btnSweepStop.Size = new System.Drawing.Size(120, 36);
+            this.btnSweepStop.TabIndex = 36;
+            this.btnSweepStop.Text = "STOP";
+            this.btnSweepStop.UseVisualStyleBackColor = true;
+            this.btnSweepStop.Click += new System.EventHandler(this.btnSweepStop_Click);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.lvFreqTable);
+            this.groupBox7.Font = new System.Drawing.Font("맑은 고딕", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.groupBox7.Location = new System.Drawing.Point(554, 72);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(345, 523);
+            this.groupBox7.TabIndex = 22;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "FREQ. TABLE";
+            // 
+            // lvFreqTable
+            // 
+            this.lvFreqTable.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvFreqTable.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.lvFreqTable.HideSelection = false;
+            listViewItem2.Tag = "";
+            this.lvFreqTable.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1,
+            listViewItem2,
+            listViewItem3,
+            listViewItem4,
+            listViewItem5,
+            listViewItem6,
+            listViewItem7,
+            listViewItem8,
+            listViewItem9,
+            listViewItem10,
+            listViewItem11,
+            listViewItem12,
+            listViewItem13,
+            listViewItem14,
+            listViewItem15,
+            listViewItem16,
+            listViewItem17,
+            listViewItem18,
+            listViewItem19,
+            listViewItem20,
+            listViewItem21,
+            listViewItem22,
+            listViewItem23,
+            listViewItem24,
+            listViewItem25,
+            listViewItem26,
+            listViewItem27});
+            this.lvFreqTable.Location = new System.Drawing.Point(13, 34);
+            this.lvFreqTable.MultiSelect = false;
+            this.lvFreqTable.Name = "lvFreqTable";
+            this.lvFreqTable.Size = new System.Drawing.Size(322, 478);
+            this.lvFreqTable.TabIndex = 0;
+            this.lvFreqTable.UseCompatibleStateImageBehavior = false;
+            this.lvFreqTable.SelectedIndexChanged += new System.EventHandler(this.lvFreqTable_SelectedIndexChanged);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(564, 722);
+            this.ClientSize = new System.Drawing.Size(919, 613);
+            this.Controls.Add(this.groupBox7);
+            this.Controls.Add(this.groupBox5);
             this.Controls.Add(this.groupBox4);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.groupBox6);
@@ -525,7 +776,7 @@
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Name = "MainForm";
-            this.Text = "주파수 합성 모듈 (FS2)";
+            this.Text = "주파수 합성 모듈 (FSM2)";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.groupBox1.ResumeLayout(false);
@@ -546,6 +797,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbAlarm1)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -588,10 +842,19 @@
         private System.Windows.Forms.Button btnSweep;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox tbSweep;
-        private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox tbStop;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.TextBox tbStart;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Button btnSweepStop;
+        private System.Windows.Forms.TextBox tbDelayTime;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.CheckBox cbAllContinue;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.ListView lvFreqTable;
     }
 }
 

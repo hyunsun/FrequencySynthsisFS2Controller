@@ -38,6 +38,7 @@ namespace FrequencySynthesisFS2Controller
                     btnConnect.Text = "CLOSE";
                     btnFreq.Enabled = true;
                     btnSweep.Enabled = true;
+                    btnSweepStop.Enabled = true;
                 }
                 else
                 {
@@ -48,6 +49,7 @@ namespace FrequencySynthesisFS2Controller
                     btnConnect.Text = "OPEN";
                     btnFreq.Enabled = false;
                     btnSweep.Enabled = false;
+                    btnSweepStop.Enabled = false;
 
                     Alarms.ForEach(alarm => alarm.Image = Properties.Resources.black_small);
                     tbTemp.Text = "0.0";
@@ -59,13 +61,13 @@ namespace FrequencySynthesisFS2Controller
             }
         }
 
-        private static string Caption = "주파수 합성 모듈 (FS1)";
+        private static string Caption = "주파수 합성 모듈 (FSM2)";
         private static List<PictureBox> Alarms = new List<PictureBox>();
         private static int NumAlarm = 7;
 
         private static ManualResetEvent ResponseReceivedEvent = new ManualResetEvent(false);
         private static object RequestLock = new object();
-        private static int ResponseTimeout = 1000; // 1 seconds
+        private static int ResponseTimeout = 300;//1000; // 1 seconds
         private int ResponseReceived = 0;
         private byte[] ResponseFrameBuffer;
         private bool ResponseFrameStarted = false;
@@ -91,6 +93,7 @@ namespace FrequencySynthesisFS2Controller
             InitSerialPort();
             InitAlarm();
             InitFrequency();
+            InitFrequencyTable();
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
@@ -139,6 +142,19 @@ namespace FrequencySynthesisFS2Controller
         private void InitFrequency()
         {
             rbNormal.Select();
+        }
+
+        private void InitFrequencyTable()
+        {
+            lvFreqTable.View = View.Details;
+            lvFreqTable.FullRowSelect = true;
+            lvFreqTable.BeginUpdate();
+
+            lvFreqTable.Columns.Add("Index", 50, HorizontalAlignment.Center);
+            lvFreqTable.Columns.Add("FTX_OUT[MHz]", 125, HorizontalAlignment.Center);
+            lvFreqTable.Columns.Add("STALO_2[MHz]", 125, HorizontalAlignment.Center);
+
+            lvFreqTable.EndUpdate();
         }
 
         // Event handlers for serial port connection group      
@@ -201,6 +217,15 @@ namespace FrequencySynthesisFS2Controller
             }
         }
 
+        private void lvFreqTable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ListView.SelectedIndexCollection indices = lvFreqTable.SelectedIndices;
+            if (indices.Count > 0)
+            {
+                tbFreq.Text = indices[0].ToString();
+            }
+        }
+
         private void btnFreq_Click(object sender, EventArgs e)
         {
             string valueError;
@@ -233,7 +258,7 @@ namespace FrequencySynthesisFS2Controller
             int value = Convert.ToInt32(tbFreq.Text);
             if (value < 0 || value > 255)
             {
-                error = "오류: 0.0 ~ 255 사이의 값을 넣어 주세요.";
+                error = "오류: 0 ~ 255 사이의 값을 넣어 주세요.";
                 data = new byte[0];
                 return false;
             }
@@ -274,6 +299,33 @@ namespace FrequencySynthesisFS2Controller
             }
         }
 
+        private void tbDelayTime_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) &&
+                !char.IsDigit(e.KeyChar) &&
+                e.KeyChar != '.')
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if (e.KeyChar == '.' &&
+                (sender as TextBox).Text.IndexOf('.') > -1)
+            {
+                e.Handled = true;
+            }
+
+            if (!char.IsControl(e.KeyChar))
+            {
+                TextBox textBox = (TextBox)sender;
+                if (textBox.Text.IndexOf('.') > -1 &&
+                    textBox.Text.Substring(textBox.Text.IndexOf('.')).Length >= 3)
+                {
+                    e.Handled = true;
+                }
+            }
+        }
+
         private void btnSweep_Click(object sender, EventArgs e)
         {
             string valueError;
@@ -308,26 +360,64 @@ namespace FrequencySynthesisFS2Controller
             //    out reqResult);
         }
 
+        private void btnSweepStop_Click(object sender, EventArgs e)
+        {
+            string valueError;
+            byte[] data;
+            if (!ValidateSweepValue(out data, out valueError))
+            {
+                MessageBox.Show("유효하지 않은 값입니다, 다시 시도해 주세요.\n" +
+                    valueError,
+                    Caption,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+                return;
+            }
+
+            RequestResult reqResult;
+            Request request = new Request(CommandType.SweepStopRequest, data);
+            bool result = SendRequest(request, out reqResult);
+            if (!result)
+            {
+                MessageBox.Show("Sweep 값을 설정하지 못했습니다, 다시 시도해 주세요.\n" +
+                    reqResult.ErrorMessage,
+                    Caption,
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
+            }
+
+            // Test code
+            //bool result = SendRequestTest(request,
+            //    CommandType.SweepStopResponse,
+            //    ResultState.Ok,
+            //    new byte[6] { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00 },
+            //    out reqResult);
+        }
+
         private bool ValidateSweepValue(out byte[] data, out string error)
         {
             int start = Convert.ToInt32(tbStart.Text);
-            int stop = Convert.ToInt32(tbStop.Text);
+            int stop  = Convert.ToInt32(tbStop.Text);
             int sweep = Convert.ToInt32(tbSweep.Text);
+            int delay = (int)(Convert.ToDouble(tbDelayTime.Text) * 10);
 
-            if (start < 0 || start > 65535 ||
-                stop < 0 || stop > 65535 ||
+            if (start < 0 || start > 255 ||
+                stop  < 0 || stop  > 255 ||
                 sweep < 0 || sweep > 65535)
             {
-                error = "오류: 0 ~ 65535 사이의 값을 넣어 주세요.";
+                error = "오류: Start/Stop(0 ~ 255) No.(0 ~ 65535) 사이의 값을 넣어 주세요.";
                 data = new byte[0];
                 return false;
             }
 
             error = "";
-            data = new byte[6];
+            data = new byte[10];
             BitConverter.GetBytes(Convert.ToUInt16(start)).CopyTo(data, 0);
-            BitConverter.GetBytes(Convert.ToUInt16(stop)).CopyTo(data, 2);
+            BitConverter.GetBytes(Convert.ToUInt16( stop)).CopyTo(data, 2);
             BitConverter.GetBytes(Convert.ToUInt16(sweep)).CopyTo(data, 4);
+            BitConverter.GetBytes(Convert.ToUInt16(delay)).CopyTo(data, 7);
+            data[6] = rbNormal.Checked ? (byte)ModeType.Normal : (byte)ModeType.Silence;
+            data[9] = cbAllContinue.Checked ? (byte)0x01 : (byte)0x00;
             return true;
         }
 

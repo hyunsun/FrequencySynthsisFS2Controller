@@ -9,10 +9,12 @@ namespace FrequencySynthesisFS2Controller
         StatusRequest = 0x11,
         FrequencyRequest = 0x12,
         SweepRequest = 0x14,
+        SweepStopRequest = 0x15,
 
         StatusResponse = 0x91, //test: 0x71 q
         FrequencyResponse = 0x92,
-        SweepResponse = 0x94
+        SweepResponse = 0x94,
+        SweepStopResponse = 0x95,
     }
 
     public enum ModeType : byte
@@ -76,7 +78,7 @@ namespace FrequencySynthesisFS2Controller
             0x6E17, 0x7E36, 0x4E55, 0x5E74, 0x2E93, 0x3EB2, 0x0ED1, 0x1EF0
         };
 
-        public const int MessageBufferLength = 18; // max frame length with stuffing
+        public const int MessageBufferLength = 25; // max frame length with stuffing
         public const byte FS2Mode = 0x02;
         public const byte CommandDifference = 0x80; //test: 0x70;
         public const byte StuffKey = 0x7D;
@@ -151,7 +153,7 @@ namespace FrequencySynthesisFS2Controller
             result = new RequestResult();
             if (resultState == ResultState.ModeError)
             {
-                result.ErrorMessage = "오류: 요청에 실패했습니다(error code: 0xFE)";
+                result.ErrorMessage = "오류: FS2 모드가 아닙니다. 보드를 확인해 주세요.(error code: 0xFE)";
                 return false;
             }
             if (resultState == ResultState.InvalidRequest)
